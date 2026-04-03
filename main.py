@@ -2,7 +2,7 @@
 #Lance la base de donnée et l'interface graphique 
 
 import os 
-from database.database_manager import DeskManger 
+from database.database_manager import DatabaseManager
 from ui.main_window import MainWindow
 
 def main():
