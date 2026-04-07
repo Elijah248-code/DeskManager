@@ -2,23 +2,25 @@
 # Représente le lien entre un employé et un matériel
 
 
-def __init__(self,id, employe,materiel, date_attribution:str):
+class Attribution : 
+
+ def __init__(self,id : int, employe,materiel, date_attribution:str):
     self.id = id
     self.employe = employe 
     self.materiel = materiel
     self.date_attribution = date_attribution 
 
-def __str__() :
+ def __str__(self) -> str:
     return (
         f"attribution #{self.id}|"
-        f"{self.employe.get.nom_complet()}|"
+        f"{self.employe.get_nom_complet()}|"
         f"{self.materiel.get_designation()}|"
         f"Date: {self.date_attribution}"
 
 
     )
 
-def __repr__(self)-> str : 
+ def __repr__(self)-> str : 
     return (
         #r affiche les guillemets pour les str exp="toto"
         f"Attribution("
