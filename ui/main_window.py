@@ -1,6 +1,8 @@
 # Fenetre principale de l'app 
 #affiche le menu principal de donne accès aux fonctionnalites 
 
+
+
 import tkinter as tk  
 from tkinter import ttk 
 
@@ -9,20 +11,20 @@ class MainWindow :
     
     def __init__(self,db):
         #recupération de la base de donnée passé par main.py
-        self.deb()
+        self.db = db
 
         #creation de la fenetre principal 
         self.root = tk.Tk()
         self.root.title("DeskManger - Gestion de matériel")
         self.root.geometry("400x300")
-        self.root(False, False)
+        self.root.resizable(True, True)
 
         #construction de l interface 
         self._build_ui()
 
+    
     def _build_ui(self):
-        """ Construit les élément visuelles de la fenêtre"""
-
+        """Construit les éléments visuels de la fenêtre."""
                 # Titre
         tk.Label(
             self.root,
@@ -63,7 +65,7 @@ class MainWindow :
         from ui.employe_ui import EmployeUI
         EmployeUI(self.root, self.db)
 
-     def ouvrir_materiels(self):
+    def ouvrir_materiels(self):
         """Ouvre la fenêtre de gestion du matériel."""
         from ui.materiel_ui import MaterielUI
         MaterielUI(self.root, self.db)
