@@ -4,7 +4,7 @@ import sqlite3
 
 class DatabaseManager:
 
-    def __init__(self,db_path : str ="data/deskmanger.db"):
+    def __init__(self,db_path : str ="data/deskmanager.db"):
         self.db_path= db_path 
         self.connexion = sqlite3.connect(self.db_path)
         self.connexion.row_factory = sqlite3.Row
